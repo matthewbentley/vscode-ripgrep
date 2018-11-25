@@ -1,6 +1,6 @@
 {
   "name": "vscode-ripgrep",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Downloads the ripgrep binary shipped in VS Code",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -11,7 +11,7 @@
   "scripts": {
     "prepublish": "in-publish && echo 'You need to use \"publish-packed\" to publish this package' && false || not-in-publish",
     "prepublishOnly": "node ./lib/checkNpmVersion.js",
-    "postinstall": "node ./lib/postinstall.js"
+    "postinstall": "sh ./lib/postinstall.sh"
   },
   "author": "Rob Lourens",
   "license": "MIT",
